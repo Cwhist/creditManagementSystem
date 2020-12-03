@@ -1,5 +1,6 @@
 package kr.ac.hansung.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -58,6 +59,15 @@ public class CourseController {
 	// 수강 신청 처리
 	@RequestMapping("/doregister")
 	public String doRegister(Model model, @Valid Course course, BindingResult result) {
+		
+		try {
+			course.setName(new String(course.getName().getBytes("8859_1"), "utf-8"));
+			course.setType(new String(course.getType().getBytes("8859_1"), "utf-8"));
+			course.setProf(new String(course.getProf().getBytes("8859_1"), "utf-8"));
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		if(result.hasErrors()) {
 			System.out.println("== Form data does not validated ==");
