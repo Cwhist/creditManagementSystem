@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>${param.year}년 ${param.semester }학기 수강 내역</title>
 
 <link rel="stylesheet" type="text/css" 
 	href="${pageContext.request.contextPath}/resources/css/main.css" >

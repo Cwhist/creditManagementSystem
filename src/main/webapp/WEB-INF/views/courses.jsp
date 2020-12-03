@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>학기별 이수 학점 조회</title>
 
 <link rel="stylesheet" type="text/css" 
 	href="${pageContext.request.contextPath}/resources/css/main.css" >
