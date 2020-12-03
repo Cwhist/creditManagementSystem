@@ -13,7 +13,6 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.ac.hansung.model.Course;
-import kr.ac.hansung.model.Offer;
 import kr.ac.hansung.service.CourseService;
 
 @Controller
