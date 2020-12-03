@@ -9,7 +9,7 @@
 <body>
 
 	<p> <a href="${pageContext.request.contextPath }/courses"> 학기별 이수 학점 조회 </a> </p>
-	<p> <a href="${pageContext.request.contextPath }/register"> 수강 신청하기 </a> </p>
+	<p> <a href="${pageContext.request.contextPath }/registercourse"> 수강 신청하기 </a> </p>
 	<p> <a href="${pageContext.request.contextPath }/showregister"> 수강 신청 조회 </a> </p>
 
 	<p> <a href="${pageContext.request.contextPath }/offers"> Show current offers </a> </p>
