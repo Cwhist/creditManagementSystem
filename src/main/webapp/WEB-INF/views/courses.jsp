@@ -24,7 +24,7 @@
 		<tbody>
 			<c:set var="totalcredit" value="0"/>
 			<c:forEach var="year" items="${years}">
-				<c:set var="semesters">1,2</c:set>
+				<c:set var="semesters">2,1</c:set>
 				<c:forEach var="semester" items="${semesters }">
 					<c:set var="credits" value="0"/>
 					<c:forEach var="course" items="${courses}">
