@@ -60,6 +60,7 @@ public class CourseController {
 	@RequestMapping("/doregister")
 	public String doRegister(Model model, @Valid Course course, BindingResult result) {
 		
+		// utf-8로 인코딩하여 한글깨짐 문제 해결
 		try {
 			course.setName(new String(course.getName().getBytes("8859_1"), "utf-8"));
 			course.setType(new String(course.getType().getBytes("8859_1"), "utf-8"));
@@ -84,6 +85,16 @@ public class CourseController {
 		courseService.insert(course);
 		
 		return "courseregistered";
+	}
+	
+	// 수강 신청 내역 보기
+	@RequestMapping("/showregister")
+	public String showRegister(Model model) {
+		
+		List<Course> courses = courseService.getCurrent();
+		model.addAttribute("courses", courses);
+		
+		return "showregister";
 	}
 	
 
