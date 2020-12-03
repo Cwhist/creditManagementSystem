@@ -10,7 +10,9 @@
 </head>
 
 <body>
-	<c:out value='alert("${param.name} 과목 수강신청에 성공했습니다!")' />
-	<c:redirect url="registercourse"/>
+	<script>
+		alert("수강 신청 완료!");
+		document.location.href="registercourse";
+	</script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 	href="${pageContext.request.contextPath}/resources/css/main.css" >
 </head>
 <body>
-	<sf:form method="post" action="${pageContext.request.contextPath}/doregister" modelAttribute="course">
+	<sf:form method="post" action="${pageContext.request.contextPath}/doregister" modelAttribute="course" >
 	<table class="styled-table">
 		<thead>
 			<tr>
@@ -45,7 +45,15 @@
 			<sf:errors class="error" path="credit"/> </th>
 			</tr>
 			
-			<tr> <th colspan="2" align="center"> <input type="submit" value="등록"/> </th></tr>
+			<tr>
+			<th colspan="2" align="center"> 
+				<sf:input class="control" type="hidden" path="year" value="2021"/>
+				<sf:errors class="error" path="year"/>
+				<sf:input class="control" type="hidden" path="semester" value="1"/>
+				<sf:errors class="error" path="semester"/>
+				<input type="submit" value="등록"/>
+			</th>
+			</tr>
 		</tbody>
 	</table>
 	</sf:form>
