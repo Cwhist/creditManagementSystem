@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class LoginController {
 	
+	// 로그인 페이지
 	@RequestMapping("/login")
 	public String showLogin(@RequestParam(value="error", required=false) String error,
 			@RequestParam(value="logout", required=false) String logout,

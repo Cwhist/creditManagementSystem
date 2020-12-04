@@ -65,7 +65,6 @@ public class CourseController {
 			course.setType(new String(course.getType().getBytes("8859_1"), "utf-8"));
 			course.setProf(new String(course.getProf().getBytes("8859_1"), "utf-8"));
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

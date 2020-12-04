@@ -33,7 +33,7 @@ public class CourseDao {
     }
     
     // cRud method
-    //query and return a single object
+    // 쿼리하여 1개의 Course 리턴
     public Course getCourse(String name) {
     	
     	String sqlStatement = "select * from courses where name=?";
@@ -60,7 +60,7 @@ public class CourseDao {
     	
     }
     
-    //query and return a multiple object
+    // 쿼리하여 여러개의 Course 리턴
     public List<Course> getCourses() {
     	
     	String sqlStatement = "select * from courses";
@@ -87,6 +87,7 @@ public class CourseDao {
     }
     
     // Crud method
+    // 데이터 삽입
     public boolean insert(Course course) {
     	
     	String year = course.getYear();
@@ -103,6 +104,7 @@ public class CourseDao {
     }
     
     // crUd method
+    // 데이터 수정
     public boolean update(Course course) {
     	
     	int id = course.getId();
@@ -120,6 +122,7 @@ public class CourseDao {
     }
     
     // cruD method
+    // 데이터 삭제
     public boolean delete(int id) {
     	
     	String sqlStatement = "delete from courses where id=?";
@@ -127,6 +130,7 @@ public class CourseDao {
     	return (jdbcTemplate.update(sqlStatement, new Object[] {id}) == 1);
     }
     
+    // 쿼리하여 여러개의 Course의 year속성 리턴
     public List<String> getYears() {
     	String sqlStatement = "select year from courses";
     	List<String> list = jdbcTemplate.query(sqlStatement,new RowMapper<String>() {

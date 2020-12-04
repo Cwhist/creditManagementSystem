@@ -17,15 +17,15 @@ public class CourseService {
 	public List<Course> getCurrent() {
 		return courseDao.getCourses();
 	}
+	
+	public List<String> getYears() {
+		return courseDao.getYears();
+	}
 
 	public void insert(Course course) {
 		
 		courseDao.insert(course);
 		
-	}
-	
-	public List<String> getYears() {
-		return courseDao.getYears();
 	}
 
 }
